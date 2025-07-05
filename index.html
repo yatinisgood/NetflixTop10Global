@@ -7,8 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header class="main-header">
+        <img src="asserts/Netflix_Logo.png" alt="Netflix Logo" class="netflix-logo">
+    </header>
     <div class="selector-container">
-        <select id="json-selector"></select>
+        <img src="asserts/top10.svg" alt="Top 10" class="top10-logo">
+        <div class="custom-select-wrapper">
+            <div class="custom-select" id="date-dropdown-container">
+                <div class="custom-select__trigger">
+                    <span id="selected-date">Select a week</span>
+                    <div class="arrow"></div>
+                </div>
+                <div class="custom-options" id="date-options">
+                    <!-- Options will be populated by script.js -->
+                </div>
+            </div>
+        </div>
     </div>
 
     <main id="app-container">

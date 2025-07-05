@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const selector = document.getElementById('json-selector');
-    
-    // The list of JSON files is now dynamically generated.
-const jsonFiles = [
+    const dateDropdownContainer = document.getElementById('date-dropdown-container');
+    const selectedDate = document.getElementById('selected-date');
+    const dateOptions = document.getElementById('date-options');
+    const customSelectTrigger = dateDropdownContainer.querySelector('.custom-select__trigger');
+
+    const jsonFiles = [
     "netflix_top10_2021-07-04",
     "netflix_top10_2021-07-11",
     "netflix_top10_2021-07-18",
@@ -194,40 +196,50 @@ const jsonFiles = [
     "netflix_top10_2025-02-09",
     "netflix_top10_2025-02-16",
     "netflix_top10_2025-02-23",
-    "netflix_top10_2025-03-02",
-    "netflix_top10_2025-03-09",
-    "netflix_top10_2025-03-16",
-    "netflix_top10_2025-03-23",
-    "netflix_top10_2025-03-30",
-    "netflix_top10_2025-04-06",
-    "netflix_top10_2025-04-13",
-    "netflix_top10_2025-04-20",
-    "netflix_top10_2025-04-27",
-    "netflix_top10_2025-05-04",
-    "netflix_top10_2025-05-11",
-    "netflix_top10_2025-05-18",
-    "netflix_top10_2025-05-25",
-    "netflix_top10_2025-06-01",
-    "netflix_top10_2025-06-08",
-    "netflix_top10_2025-06-15",
-    "netflix_top10_2025-06-22",
-    "netflix_top10_2025-06-29"
-];
+    "netflix_top10_2025-03-02"
+    ];
 
+    // --- Populate Custom Dropdown ---
     jsonFiles.forEach(file => {
-        const option = document.createElement('option');
-        option.value = file;
-        option.textContent = file;
-        selector.appendChild(option);
+        const option = document.createElement('div');
+        option.classList.add('custom-option');
+        option.textContent = file.replace('netflix_top10_', ''); // Make it cleaner
+        option.dataset.value = file;
+        dateOptions.appendChild(option);
+
+        option.addEventListener('click', () => {
+            selectedDate.textContent = option.textContent;
+            dateDropdownContainer.classList.remove('open');
+            // Remove 'selected' class from all options
+            dateOptions.querySelectorAll('.custom-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            // Add 'selected' class to the clicked option
+            option.classList.add('selected');
+            fetchAndDisplayData(option.dataset.value);
+        });
     });
 
-    selector.addEventListener('change', (event) => {
-        fetchAndDisplayData(event.target.value);
+    // --- Custom Dropdown Logic ---
+    customSelectTrigger.addEventListener('click', () => {
+        dateDropdownContainer.classList.toggle('open');
     });
 
-    // Initial load
+    window.addEventListener('click', (e) => {
+        if (!dateDropdownContainer.contains(e.target)) {
+            dateDropdownContainer.classList.remove('open');
+        }
+    });
+
+
+    // --- Initial Load ---
     if (jsonFiles.length > 0) {
-        fetchAndDisplayData(jsonFiles[0]);
+        const firstOption = dateOptions.querySelector('.custom-option');
+        if (firstOption) {
+            selectedDate.textContent = firstOption.textContent;
+            firstOption.classList.add('selected');
+            fetchAndDisplayData(firstOption.dataset.value);
+        }
     }
 });
 
