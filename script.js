@@ -162,10 +162,17 @@ function renderShelves(sortedShelves) {
                 animeDetails.textContent = `觀看次數 ${weeklyViewsMillions}M | 進榜週數 ${movie.cumulativeWeeksInTop10}`;
             }
 
+            const rankNumber = document.createElement('div');
+            rankNumber.className = 'rank-number';
+            rankNumber.textContent = movie.weeklyRank;
+
             titleOverlay.appendChild(animeTitle);
             titleOverlay.appendChild(animeDetails);
+            
+            posterContainer.appendChild(rankNumber);
             posterContainer.appendChild(img);
             posterContainer.appendChild(titleOverlay);
+
             animeItem.appendChild(posterContainer);
             shelf.appendChild(animeItem);
         });

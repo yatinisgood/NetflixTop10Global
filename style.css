@@ -115,6 +115,19 @@ body {
     z-index: 2;
 }
 
+.rank-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-bottom-right-radius: 8px;
+    z-index: 3;
+}
+
 /* --- 影片標題 --- */
 .anime-title {
     color: #fff;
