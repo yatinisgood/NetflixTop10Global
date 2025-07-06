@@ -52,7 +52,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 
     // --- Initial Load ---
-    if (jsonFiles.length > 0) {
+    if (jsonFiles.length > 1) { // Check if there is a second option
+        const secondOption = dateOptions.querySelectorAll('.custom-option')[1];
+        if (secondOption) {
+            selectedDate.textContent = secondOption.textContent;
+            secondOption.classList.add('selected');
+            fetchAndDisplayData(secondOption.dataset.value);
+        }
+    } else if (jsonFiles.length > 0) { // Fallback to the first option if only one exists
         const firstOption = dateOptions.querySelector('.custom-option');
         if (firstOption) {
             selectedDate.textContent = firstOption.textContent;
@@ -117,9 +124,9 @@ function renderShelves(sortedShelves) {
 
     const displayTitles = {
         'films': '電影',
-        'films_non_english': '非英語電影',
+        'films-non-english': '非英語電影',
         'tv': '節目',
-        'tv_non_english': '非英語節目'
+        'tv-non-english': '非英語節目'
     };
 
     sortedShelves.forEach(([groupTitle, movies]) => {
