@@ -417,8 +417,8 @@
         "weeklyRank": 4,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
-        "weeklyHoursViewed": 158500000,
-        "weeklyViews": 87200000,
+        "weeklyHoursViewed": 160800000,
+        "weeklyViews": 88500000,
         "runtime": "1.8166999816894531",
         "runtime_second": 6540,
         "runtime_hmm": "1:49",
@@ -579,6 +579,24 @@
         "weeklyRank": 3,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
+        "weeklyHoursViewed": 652200000,
+        "weeklyViews": 106300000,
+        "runtime": "6.133299827575684",
+        "runtime_second": 22080,
+        "runtime_hmm": "6:07",
+        "bigImage": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABURK_Lqz1m4_GcvyzzSDGCMl4vjv_JvaaNmgN5cx4ZTLYa2lQ6Ir6TkApDENBlf-cCwFSIucIPkfJ5oFhi7ryDyvVqMKqzb7EyMT.jpg?r=052",
+        "weekEndDate": null,
+        "videoId": "81615967",
+        "category": "NONENGLISH_SERIES",
+        "title": "Squid Game: Season 3",
+        "shortSynopsis": "New games. Old foes. Player 456 and the Front Man clash in a final showdown of moral dilemmas and pulse-racing challenges. Who will emerge victorious?",
+        "releaseYear": "2025",
+        "groupfile": "tv-non-english"
+    },
+    {
+        "weeklyRank": 4,
+        "cumulativeWeeksInTop10": 0,
+        "maturityRating": "TV-MA",
         "weeklyHoursViewed": 710200000,
         "weeklyViews": 106000000,
         "runtime": "6.699999809265137",
@@ -594,7 +612,7 @@
         "groupfile": "tv-non-english"
     },
     {
-        "weeklyRank": 4,
+        "weeklyRank": 5,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
         "weeklyHoursViewed": 396300000,
@@ -612,7 +630,7 @@
         "groupfile": "tv-non-english"
     },
     {
-        "weeklyRank": 5,
+        "weeklyRank": 6,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
         "weeklyHoursViewed": 900700000,
@@ -630,7 +648,7 @@
         "groupfile": "tv-non-english"
     },
     {
-        "weeklyRank": 6,
+        "weeklyRank": 7,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
         "weeklyHoursViewed": 519800000,
@@ -648,7 +666,7 @@
         "groupfile": "tv-non-english"
     },
     {
-        "weeklyRank": 7,
+        "weeklyRank": 8,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
         "weeklyHoursViewed": 215700000,
@@ -666,7 +684,7 @@
         "groupfile": "tv-non-english"
     },
     {
-        "weeklyRank": 8,
+        "weeklyRank": 9,
         "cumulativeWeeksInTop10": 0,
         "maturityRating": "TV-MA",
         "weeklyHoursViewed": 258900000,
@@ -681,24 +699,6 @@
         "title": "Lupin: Part 2",
         "shortSynopsis": "Pursued by Hubert and his henchmen, Assane scrambles to find Raoul and wins an unlikely new ally as he draws up a grand plan to reveal Hubert's crimes.",
         "releaseYear": "2021",
-        "groupfile": "tv-non-english"
-    },
-    {
-        "weeklyRank": 9,
-        "cumulativeWeeksInTop10": 0,
-        "maturityRating": "TV-MA",
-        "weeklyHoursViewed": 368400000,
-        "weeklyViews": 60100000,
-        "runtime": "6.133299827575684",
-        "runtime_second": 22080,
-        "runtime_hmm": "6:07",
-        "bigImage": "https://dnm.nflximg.net/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABURK_Lqz1m4_GcvyzzSDGCMl4vjv_JvaaNmgN5cx4ZTLYa2lQ6Ir6TkApDENBlf-cCwFSIucIPkfJ5oFhi7ryDyvVqMKqzb7EyMT.jpg?r=052",
-        "weekEndDate": null,
-        "videoId": "81615967",
-        "category": "NONENGLISH_SERIES",
-        "title": "Squid Game: Season 3",
-        "shortSynopsis": "New games. Old foes. Player 456 and the Front Man clash in a final showdown of moral dilemmas and pulse-racing challenges. Who will emerge victorious?",
-        "releaseYear": "2025",
         "groupfile": "tv-non-english"
     },
     {
