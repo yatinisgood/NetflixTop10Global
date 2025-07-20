@@ -156,18 +156,31 @@ function renderShelves(sortedShelves) {
 
             const animeTitle = document.createElement('p');
             animeTitle.className = 'anime-title';
-            animeTitle.textContent = movie.title;
+            detail_3=movie.releaseYear
+            animeTitle.textContent = `${movie.title} (${detail_3})`;
 
             const animeDetails = document.createElement('p');
             animeDetails.className = 'anime-details';
             const weeklyViews = parseInt(movie.weeklyViews);
+            const cumulativeWeeksInTop10 = parseInt(movie.cumulativeWeeksInTop10);
+            detail_1=""
+            detail_2=""
+            
             if (weeklyViews === 0) {
                 const weeklyHoursViewedMillions = (parseInt(movie.weeklyHoursViewed) / 1000000).toFixed(1);
-                animeDetails.textContent = `觀賞時數 ${weeklyHoursViewedMillions}M 小時 | 進榜週數 ${movie.cumulativeWeeksInTop10}`;
-            } else {
+                detail_1=`觀賞時數 ${weeklyHoursViewedMillions}M 小時`
+            } else{
                 const weeklyViewsMillions = (weeklyViews / 1000000).toFixed(1);
-                animeDetails.textContent = `觀看次數 ${weeklyViewsMillions}M | 進榜週數 ${movie.cumulativeWeeksInTop10}`;
+                detail_1=`觀看次數 ${weeklyViewsMillions}M`
             }
+            if (cumulativeWeeksInTop10===0){
+                detail_2=`片長 ${movie.runtime_hmm}`
+            }
+            else{
+                detail_2=`進榜週數 ${movie.cumulativeWeeksInTop10}`
+            }
+            animeDetails.textContent = `${detail_1} | ${detail_2}`;
+            
 
             const rankNumber = document.createElement('div');
             rankNumber.className = 'rank-number';
