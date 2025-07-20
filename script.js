@@ -143,6 +143,14 @@ function renderShelves(sortedShelves) {
         movies.forEach(movie => {
             const animeItem = document.createElement('div');
             animeItem.className = 'anime-item';
+            // *** 主要修改點：新增連結功能 ***
+
+            // 1. 創建 <a> 標籤
+            const link = document.createElement('a');
+            link.href = `https://www.netflix.com/title/${movie.videoId}`;
+            link.target = "_blank"; // 在新分頁打開
+            link.style.textDecoration = 'none'; // 移除連結預設的底線
+
 
             const posterContainer = document.createElement('div');
             posterContainer.className = 'poster-container';
@@ -192,8 +200,13 @@ function renderShelves(sortedShelves) {
             posterContainer.appendChild(rankNumber);
             posterContainer.appendChild(img);
             posterContainer.appendChild(titleOverlay);
+            // 3. 將整個海報容器 (posterContainer) 放入 <a> 標籤內
+            link.appendChild(posterContainer);
 
-            animeItem.appendChild(posterContainer);
+            // 4. 最後將帶有連結的整個組件放入 animeItem
+            animeItem.appendChild(link);
+
+            // animeItem.appendChild(posterContainer);
             shelf.appendChild(animeItem);
         });
 
