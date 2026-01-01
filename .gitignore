@@ -1,2 +1,10 @@
+# Synology ignore
 .SynologyWorkingDirectory/
 @eaDir/
+
+# Windows ignore
+Thumbs.db
+Desktop.ini
+
+# Mac ignore (如果有用 Mac 連線)
+.DS_Store
